@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+
+    <div class="contenedor flex">
+
+    </div>
+
+    <script>
+        const array = [
+          {
+            nombre: "zapatos",
+            precio: "20000",
+            descripcion: "Zapatos negros para hombre",
+            imagen: "https://mariohernandez.vtexassets.com/arquivos/ids/213954/zapatos-garcia-negro-premium_1.jpg?v=637920274644600000",
+          },
+          {
+            nombre: "camisa",
+            precio: "15000",
+            descripcion: "",
+            imagen: "https://quest.vtexassets.com/arquivos/ids/431128/QUE111220082-18-1.jpg?v=638295113958470000",
+          },
+        ];
+
+        array.forEach(
+          (elemento)=>{
+            document.querySelector('.contenedor').innerHTML += `
+                <div class='bg-gray-400 p-4'>
+                    <img width='200' class='rounded-lg' src='${elemento.imagen}'>
+                    <h1>${elemento.nombre} </h1>   
+                </div>
+            `
+          }
+        )
+      </script>
+</body>
+</html>
